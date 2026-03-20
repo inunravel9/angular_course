@@ -240,3 +240,100 @@ flex: 1;
 .education-section .list-item div {
   font: var(--font-h4);
 }
+
+
+/* последние статьи */
+
+.latest-articles {
+  padding: 80px 97px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.latest-articles h2 {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.article-even,
+.article-odd {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  margin-bottom: 80px;
+  height: auto;
+  overflow: hidden;
+}
+
+.article-even {
+  background: var(--bg_green);
+}
+.article-odd {
+  background: var(--bg_orange);
+}
+
+.article-even .article-info p time {
+  color: var(--accsent_green); 
+}
+
+
+.article-odd .article-info p time {
+  color: var(--accsent_orange);
+}
+
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-right: 15px;
+}
+
+
+.article-even img,
+.article-odd img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.article-info {
+  flex: 1;
+  padding:49px;
+}
+
+.article-info h3 {
+  margin: 0 0 12px 0;
+}
+
+.article-info p {
+  font: var(--font-small);
+  color: var(--text);
+  opacity: 0.8;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+  font-size:0.7em;
+}
+
+.article-info + p {
+  font: var(--font-body);
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.latest-articles a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px 40px;
+  color: var(--accsent_green);
+  text-decoration: none;
+  font: var(--font-h4);
+  border:1px solid var(--accsent_green); 
+  border-radius: 5px;
+}
