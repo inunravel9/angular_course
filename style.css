@@ -10,6 +10,12 @@ html,
 body {
   font-family: Inter, sans-serif;
 }
+h1{
+  color:var(--heading);
+  font:var(--font-h1);
+}
+
+/* главная страница часть с "Обо мне" */
 .about-section {
   display: flex;
   justify-content: space-between;
@@ -22,7 +28,7 @@ body {
 .about-section p {
   font: var(--font-small);
   margin:10px 10px 10px 0;
-  color:var(--cl_text);
+  color:var(--text);
 }
 .about-image {
   position: relative;
@@ -54,5 +60,31 @@ body {
   color: var(--accsent_green);
   text-decoration: none;
 }
-.nav li {
+
+/* главная страница навигация */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 97px;
+}
+header a:first-child {
+  font:var(font-body);
+  text-decoration: none;
+  color:var(--text);
+  text-decoration: none;
+}
+
+nav {
+  margin-top: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px; 
+
 }
