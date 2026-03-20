@@ -1,13 +1,13 @@
-:root{
-  --heading: #323747
-  --text: #68686A
-  --graphics: #BDC1CA
-  --accsent_green: #61C15C
-  --accsent_orange: #DB5E31
-  
-  --bg_orange: #FEF3EF
-  --bg_green: #F4FBF4
-  --bg_default:#FFFFFF
+:root {
+  --heading: #323747;
+  --text: #68686a;
+  --graphics: #bdc1ca;
+  --accsent_green: #61c15c;
+  --accsent_orange: #db5e31;
+
+  --bg_orange: #fef3ef;
+  --bg_green: #f4fbf4;
+  --bg_default: #ffffff;
 
   --font-h1: 700 52px Inter;
   --font-h2: 700 40px Inter;
@@ -16,5 +16,4 @@
 
   --font-body: 400 18px Inter;
   --font-small: 400 14px Inter;
-
 }
