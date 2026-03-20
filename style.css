@@ -86,7 +86,6 @@ header {
   padding: 20px 97px;
 }
 header a:first-child {
-  /* font:var(font-body); */
   text-decoration: none;
   color:var(--text);
   text-decoration: none;
@@ -111,40 +110,41 @@ nav ul {
   padding: 80px 97px;
 }
 
-.career-container {
+.two-column-layout{
   display: flex;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.current-job {
-  flex: 1;
+.main-content {
+flex: 1;
 }
 
-.current-job h2 {
+.main-content h2 {
   margin-bottom: 24px;
 }
 
-.current-job h3 {
+.main-content h3 {
   margin-bottom: 16px;
 }
 
-.current-job p {
+.main-content p {
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
-.work-experience {
+.list-content {
   flex: 1;
+  margin-top:calc(49px + 24px);
 }
 
-.work-experience h3 {
+.list-content h3 {
   font: var(--font-h3);
   margin-bottom: 40px;
 }
 
-.experience-item {
+.list-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -152,24 +152,27 @@ nav ul {
   position: relative;
 }
 
-.experience-item img {
+
+.list-item img {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
 }
 
-.experience-item h4 {
+
+.list-item h4 {
   font: var(--font-h4);
   margin-bottom: 12px;
 }
 
-.experience-item p {
+.list-item p {
   font: var(--font-small);
   line-height: 1.6;
   margin-top:5px;
   margin-bottom:90px;
 }
- .experience-item::after {
+
+.list-item::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -223,4 +226,17 @@ nav ul {
   right: 0;
   height: 2px;
   background: var(--graphics);
+}
+
+.education-section {
+  padding: 80px 97px;
+}
+
+ .education-section .list-item {
+  gap: 40px;
+}
+
+
+.education-section .list-item div {
+  font: var(--font-h4);
 }
