@@ -1,0 +1,20 @@
+:root{
+  --heading: #323747
+  --text: #68686A
+  --graphics: #BDC1CA
+  --accsent_green: #61C15C
+  --accsent_orange: #DB5E31
+  
+  --bg_orange: #FEF3EF
+  --bg_green: #F4FBF4
+  --bg_default:#FFFFFF
+
+  --font-h1: 700 52px Inter;
+  --font-h2: 700 40px Inter;
+  --font-h3: 700 24px Inter;
+  --font-h4: 400 24px Inter;
+
+  --font-body: 400 18px Inter;
+  --font-small: 400 14px Inter;
+
+}
