@@ -1,0 +1,49 @@
+@import "./variables.css";
+@import "./articles.css";
+@import "./about_section.css";
+@import "./edu.css";
+@import "./footer.css";
+@import "./header.css";
+@import "./work.css";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Inter, sans-serif;
+}
+h1{
+  color:var(--heading);
+  font:var(--font-h1);
+}
+h2{
+  color:var(--heading);
+  font:var(--font-h2);
+}
+h3{
+  color:var(--heading);
+  font:var(--font-h3);
+}
+h4{
+  color:var(--heading);
+  font:var(--font-h4);
+}
+p{
+  color:var(--text);
+  font:var(--font-small);
+}
+
+section, footer, header{
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-left:70px;
+  padding-right:70px;
+}
+
+
+

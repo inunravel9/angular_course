@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 97px;
+}
+header a:first-child {
+  text-decoration: none;
+  color:var(--text);
+  text-decoration: none;
+}
+
+nav {
+  margin-top: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px; 
+
+}
