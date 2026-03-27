@@ -6,6 +6,8 @@
 @import "./header.css";
 @import "./work.css";
 @import "./hobby.css";
+@import "./blog_article.css";
+
 * {
     margin: 0;
     padding: 0;

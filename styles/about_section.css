@@ -34,3 +34,8 @@ margin: 20px 0px;
     width: 30%;
     height: auto;
 }
+
+.blog-page .about-image-overlay{
+left: auto;
+right: 0;
+}
