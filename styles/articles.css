@@ -16,20 +16,28 @@
   align-items: center;
   gap: 50px;
   margin: 40px 0;
+  background-color: var(--bg_green);
+}
+.article-even .article-content p:first-of-type {
+    color:var(--accsent_green);
 }
 
 .article-odd {
-  direction: rtl;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 50px;
   margin: 40px 0;
+    background-color: var(--bg_orange);
 }
 
+.article-odd .article-content p:first-of-type {
+    color:var(--accsent_orange);
+}
 
-.article-odd .article-content {
-  direction: ltr;  
+ .article-content p, h3{
+  margin:10px 50px;
+
 }
 
 .articles img {
