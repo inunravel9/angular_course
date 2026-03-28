@@ -10,11 +10,15 @@
     border-radius: 5px;
 } 
 
+.articles a:hover{
+    color: var(--accsent_orange);
+     border: 1px solid var(--accsent_orange);
+}
+
 .article-even {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 50px;
   margin: 40px 0;
   background-color: var(--bg_green);
 }
@@ -26,9 +30,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 50px;
   margin: 40px 0;
-    background-color: var(--bg_orange);
+  background-color: var(--bg_orange);
 }
 
 .article-odd .article-content p:first-of-type {
@@ -42,7 +45,8 @@
 
 .articles img {
     position: relative;
+    right: 0;
     width: 100%;
-    max-width: 470px;
     margin: 0 auto;
 }
+
