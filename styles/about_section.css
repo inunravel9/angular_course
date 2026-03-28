@@ -1,0 +1,41 @@
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 50px;
+}
+
+.about-section a {
+    color:   var(--accsent_green);
+    font:var(--font-small);
+}
+.about-section p {
+margin: 20px 0px;
+}
+
+.about-image {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.about-image-main {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.about-image-overlay {
+    position: absolute;
+    left: -12%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30%;
+    height: auto;
+}
+
+.blog-page .about-image-overlay{
+left: auto;
+right: 0;
+}

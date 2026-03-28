@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header a:first-child {
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    transition: color 0.3s ease; 
+}
+
+
+/* Состояние при наведении */
+nav ul li a:hover {
+    color: var(--accsent_green); /* Цвет меняется на акцентный из ваших переменных */
+}
