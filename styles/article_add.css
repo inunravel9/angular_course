@@ -1,0 +1,16 @@
+.blog-page .submit-btn {
+  min-width: 276px;
+}
+
+.cancel-form-btn {
+  background-color: var(--bg-default);
+  border-color: var(--accent-green);
+}
+
+#article-form{
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
