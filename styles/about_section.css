@@ -17,7 +17,7 @@ margin: 20px 0px;
     position: relative;
     width: 100%;
     max-width: 470px;
-    margin: 0 auto;
+    justify-self: self-end;
 }
 
 .about-image-main {

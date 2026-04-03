@@ -7,8 +7,7 @@ body.blog-page .articles-grid {
     margin: 40px 0;
 }
 
-body.blog-page .article-even, 
-body.blog-page .article-odd {
+body.blog-page .blog-article {
     display: flex;
     flex-direction: column-reverse;
     margin: 0;
@@ -16,7 +15,8 @@ body.blog-page .article-odd {
     overflow: hidden;
 }
 
-body.blog-page img:not(.about-image-overlay), .article-content img:not(.about-image-overlay) {
+body.blog-page img:not(.about-image-overlay), 
+.article-content img:not(.about-image-overlay) {
     order: 1;
     width: 100%;
     max-width: 100%; 
@@ -24,8 +24,7 @@ body.blog-page img:not(.about-image-overlay), .article-content img:not(.about-im
     margin: 0;
 }
 
-
-body.blog-page .articles-grid article:first-child {
+body.blog-page .articles-grid .blog-article:first-child {
     grid-column: span 3; 
     display: flex;
     flex-direction: row-reverse; 

@@ -14,7 +14,7 @@
   </head>
 
   <body class="blog-page">
-    <header>
+    <header class="container">
       <a href="./index.html">Name-folio</a>
       <nav>
         <ul>
@@ -25,7 +25,7 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section class="container">
         <div class="about-section">
           <div>
             <h1>Мой блог</h1>
@@ -43,10 +43,10 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="container">
         <h1>Все статьи</h1>
         <div class="articles-grid">
-          <article class="article-even">
+          <article class="blog-article">
             <div class="article-content">
               <h3>Как создать адаптивный дизайн за 30 минут</h3>
               <p>
@@ -63,7 +63,7 @@
             </div>
             <img src="picture/Selection1.png " alt="Мой блог " />
           </article>
-          <article class="article-odd">
+          <article class="blog-article">
             <div class="article-content">
               <h3>Как создать адаптивный дизайн за 30 минут</h3>
               <p>
@@ -73,18 +73,7 @@
             </div>
             <img src="picture/Selection1.png " alt="Мой блог " />
           </article>
-          <article class="article-even">
-            <div class="article-content">
-              <h3>Как создать адаптивный дизайн за 30 минут</h3>
-              <p>
-                Опубликовано:
-                <time datetime="2024-12-15 ">15 декабря 2024</time>
-              </p>
-
-            </div>
-            <img src="picture/Selection1.png " alt="Мой блог " />
-          </article>
-          <article class="article-odd">
+          <article class="blog-article">
             <div class="article-content">
               <h3>Как создать адаптивный дизайн за 30 минут</h3>
               <p>
@@ -94,7 +83,7 @@
             </div>
             <img src="picture/Selection1.png " alt="Мой блог " />
           </article>
-          <article class="article-even">
+          <article class="blog-article">
             <div class="article-content">
               <h3>Как создать адаптивный дизайн за 30 минут</h3>
               <p>
@@ -104,7 +93,7 @@
             </div>
             <img src="picture/Selection1.png " alt="Мой блог " />
           </article>
-          <article class="article-odd">
+          <article class="blog-article">
             <div class="article-content">
               <h3>Как создать адаптивный дизайн за 30 минут</h3>
               <p>
@@ -114,7 +103,17 @@
             </div>
             <img src="picture/Selection1.png " alt="Мой блог " />
           </article>
-          <article class="article-even">
+          <article class="blog-article">
+            <div class="article-content">
+              <h3>Как создать адаптивный дизайн за 30 минут</h3>
+              <p>
+                Опубликовано:
+                <time datetime="2024-12-15 ">15 декабря 2024</time>
+              </p>
+            </div>
+            <img src="picture/Selection1.png " alt="Мой блог " />
+          </article>
+          <article class="blog-article">
             <div class="article-content">
               <h3>Как создать адаптивный дизайн за 30 минут</h3>
               <p>
@@ -126,15 +125,29 @@
           </article>
         </div>
       </section>
-      <!-- <section>
-            <form>
-                <h2>Создать статью</h2>
-                <input type="text" placeholder="Заголовок статьи" /><br />
-                <textarea type="text" placeholder="Текст статьи" rows="5" cols="21"></textarea
+      <section class="container" class="admin-section">
+        <aside class="admin-panel">
+          <button type="button" id="create-article-btn" title="Создать статью">
+            <img src="picture/Vectoradm.svg" alt="Добавить статью" />
+          </button>
+          <button type="button" id="show-stats-btn" title="Показать статистику">
+            <img src="picture/Vectoradm(1).svg" alt="Статистика" />
+          </button>
+        </aside>
+        <form id="article-form" class="hidden">
+          <h2>Создать статью</h2>
+          <input type="text" placeholder="Заголовок статьи" required /><br />
+          <textarea
+            placeholder="Текст статьи"
+            rows="5"
+            cols="21"
+            required
+          ></textarea
           ><br />
-          <button type="submit">Добавить</button>
+          <button type="submit" class="submit-btn">Добавить</button>
+          <button type="button" class="button-white">Отмена</button>
         </form>
-      </section> -->
+      </section>
     </main>
     <footer id="contacts">
       <div class="footer-container">

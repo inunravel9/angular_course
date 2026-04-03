@@ -7,14 +7,12 @@ footer :is(h1, h2, h3, h4, p, label, a){
   color: var(--bg_default);
 }
 
-
 .footer-container {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
 
-/* Левая колонка */
 .footer-info {
     flex: 1;
 }
@@ -42,7 +40,6 @@ footer :is(h1, h2, h3, h4, p, label, a){
     font-size: 14px;
     opacity: 0.6;
 }
-
 
 .footer-form {
     flex: 1;
@@ -76,9 +73,8 @@ footer :is(h1, h2, h3, h4, p, label, a){
     resize: none;
 }
 
-/* Кнопка */
 .submit-btn {
-    background-color: #63c661; /* Зеленый цвет как на макете */
+    background-color: #63c661;
     color: white;
     border: none;
     padding: 12px 24px;

@@ -7,6 +7,7 @@
 @import "./work.css";
 @import "./hobby.css";
 @import "./blog_article.css";
+@import "./admin.css";
 
 * {
     margin: 0;
@@ -45,10 +46,19 @@ p {
     font: var(--font-small);
 }
 
-section,
-footer,
-header {
+/* section,
+header { */
+.container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 30px 90px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
