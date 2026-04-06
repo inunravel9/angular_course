@@ -1,0 +1,53 @@
+dialog h3 {
+  color: var(--heading);
+  margin-left: 10px;
+}
+
+dialog h4 {
+  color: var(--text);
+}
+
+#stats-dialog {
+  position: relative;
+  border: none;
+  outline: none;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  padding: 20px;
+  width: 100%;
+  max-width: 530px;
+}
+#stats-dialog button#close-stats {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+#stats-dialog button#close-stats:hover {
+  transform: scale(1.1);
+}
+
+.dialog-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dialog-content h4 {
+  width: 230px;
+  height: 110px;
+  padding: 16px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-content span {
+  font: var(--font-h2);
+}

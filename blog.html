@@ -211,7 +211,31 @@
           </div>
           <button type="submit" class="submit-btn">Submit</button>
         </form>
+        <dialog id="stats-dialog" open>
+          <button type="button" id="close-stats">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z"
+                fill="#000"
+              ></path>
+            </svg>
+          </button>
+          <div class="dialog-container"></div>
+          <h3>Статистика страницы</h3>
+          <div class="dialog-content">
+            <h4>Всего статей:<br /><span>10</span></h4>
+            <h4>Комментарии:<br /><span>0</span></h4>
+          </div>
+        </dialog>
       </div>
     </footer>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

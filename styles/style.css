@@ -8,7 +8,8 @@
 @import "./hobby.css";
 @import "./blog_article.css";
 @import "./admin_panel.css";
-@import"./article_add.css";
+@import "./article_add.css";
+@import "./statistics.css";
 
 * {
     margin: 0;
