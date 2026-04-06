@@ -1,46 +1,47 @@
-.button-white{
-    color: var(--accsent_green);
-    text-decoration: none;
-    font: var(--font-h4);
-    border: 1px solid var(--accsent_green);
-    border-radius: 5px;
+.button-white {
+  color: var(--accsent_green);
+  text-decoration: none;
+  font: var(--font-h4);
+  border: 1px solid var(--accsent_green);
+  border-radius: 5px;
 }
 
 .button-white:hover {
-    color: var(--accsent_orange);
-    border: 1px solid var(--accsent_orange);
+  color: var(--accsent_orange);
+  border: 1px solid var(--accsent_orange);
 }
 
 .blog-article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 40px 0;
 }
 
 .blog-article:nth-child(odd) {
-    background-color: var(--bg_orange);
+  background-color: var(--bg_orange);
 }
 
 .blog-article:nth-child(odd) .article-content p:first-of-type {
-    color: var(--accsent_orange);
+  color: var(--accsent_orange);
 }
 
 .blog-article:nth-child(even) {
-    background-color: var(--bg_green);
+  background-color: var(--bg_green);
 }
 
 .blog-article:nth-child(even) .article-content p:first-of-type {
-    color: var(--accsent_green);
+  color: var(--accsent_green);
 }
 
-.article-content p, h3 {
-    margin: 10px 50px;
+.article-content p,
+h3 {
+  margin: 10px 50px;
 }
 
 .articles img {
-    position: relative;
-    right: 0;
-    width: 100%;
-    margin: 0 auto;
+  position: relative;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
 }
