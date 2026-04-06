@@ -1,8 +1,4 @@
-.articles a, .button-white {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 16px 40px;
+.button-white{
     color: var(--accsent_green);
     text-decoration: none;
     font: var(--font-h4);
@@ -10,7 +6,7 @@
     border-radius: 5px;
 }
 
-.articles a:hover, .button-white:hover {
+.button-white:hover {
     color: var(--accsent_orange);
     border: 1px solid var(--accsent_orange);
 }
