@@ -1,4 +1,5 @@
-.blog-page .submit-btn, .blog-page .button-white {
+.blog-page .submit-btn,
+.blog-page .button-white {
   min-width: 275px;
   min-height: 50px;
   border: 1px solid var(--accsent_green);
@@ -13,32 +14,35 @@
   border-color: var(--accent-green);
 }
 
- #article-form{
+#article-form {
   display: flex;
   flex-direction: column;
-  gap:10px;
-
-  /* opacity: 100%;
+  gap: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.form-hide {
+  opacity: 0%;
   visibility: hidden;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
 }
 
-#article-form input, #article-form textarea{
-min-width: 1175px;
-border: 0.5px solid var(--graphics);
+#article-form input,
+#article-form textarea {
+  min-width: 1175px;
+  border: 0.5px solid var(--graphics);
 }
 
-#article-form input{
+#article-form input {
   min-height: 60px;
 }
 
-#article-form textarea{
+#article-form textarea {
   min-height: 125px;
 }
 
-.button-area{
+.button-area {
   display: flex;
   flex-direction: row;
   gap: 5px;
