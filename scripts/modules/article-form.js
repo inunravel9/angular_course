@@ -1,15 +1,43 @@
 export const initArticleForm = () => {
-  const aticleFormBtn = document.querySelector("#create-article-btn");
+  const btn = document.querySelector("#create-article-btn");
   const form = document.querySelector("#article-form");
-  const closeBtn = document.querySelector("#cancel-button");
+  const close = document.querySelector("#cancel-button");
+  const grid = document.querySelector(".articles-grid");
 
-  aticleFormBtn.onclick = () => {
+  btn.onclick = () => {
     form.classList.remove("form-hide");
-    form.scrollIntoView({ block: "center" });
+    form.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
-  closeBtn.onclick = () => {
+  close.onclick = () => {
     form.classList.add("form-hide");
     form.reset();
+  };
+
+  form.onsubmit = (event) => {
+    event.preventDefault(); //отказ от перезагрузки страницы
+
+    const newArticle = document
+      .querySelectorAll(".blog-article")[1]
+      .cloneNode(true);
+
+    newArticle.classList.add("article-new");
+    newArticle.querySelector("h3").textContent = "Новая запись";
+    const time = newArticle.querySelector("time");
+    time.textContent = new Date().toLocaleDateString("ru-RU", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+    time.setAttribute("datetime", new Date().toISOString().split("T")[0]);
+
+    grid.append(newArticle);
+    setTimeout(() => {
+      newArticle.classList.add("article-show");
+    }, 10);
+    form.classList.add("form-hide");
+    setTimeout(() => {
+      form.reset(); //чистим данные, когда форму уже не видно
+    }, 1100);
   };
 };

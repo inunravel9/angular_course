@@ -18,16 +18,14 @@ body.blog-page .blog-article {
 body.blog-page img:not(.about-image-overlay),
 .article-content img:not(.about-image-overlay) {
   order: 1;
-  width: 100%;
+  min-width: auto;
   max-width: 100%;
-  object-fit: cover;
   margin: 0;
 }
 
 body.blog-page .articles-grid .blog-article:first-child {
   grid-column: span 3;
-  display: flex;
-  flex-direction: row-reverse;
+   flex-direction: row-reverse;
   align-items: center;
   min-height: 400px;
 }
