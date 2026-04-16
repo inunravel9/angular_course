@@ -3,6 +3,7 @@ body.blog-page .articles-grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
+  min-height: 200px;
   box-sizing: border-box;
   margin: 40px 0;
 }
@@ -13,6 +14,7 @@ body.blog-page .blog-article {
   margin: 0;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 body.blog-page img:not(.about-image-overlay),
@@ -25,7 +27,31 @@ body.blog-page img:not(.about-image-overlay),
 
 body.blog-page .articles-grid .blog-article:first-child {
   grid-column: span 3;
-   flex-direction: row-reverse;
+  flex-direction: row-reverse;
   align-items: center;
   min-height: 400px;
+}
+
+#zaglushka {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin: auto auto;
+}
+
+.delete-btn svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  fill: var(--text);
+  stroke: var(--text);
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delete-btn svg:hover {
+  opacity: 1;
+  visibility: visible;
 }
