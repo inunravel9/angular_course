@@ -5,6 +5,33 @@ export const initArticleForm = () => {
   const stub = document.querySelector("#zaglushka");
   const grid = document.querySelector(".articles-grid");
 
+grid.onclick = (event) => {
+    // Проверяем, кликнули ли мы по кнопке удаления или по иконке внутри неё
+    const deleteBtn = event.target.closest('.delete-btn');
+    
+    if (deleteBtn) {
+      // Находим саму статью, в которой лежит эта кнопка
+      const article = deleteBtn.closest('.blog-article');
+      
+      if (article) {
+        article.classList.remove("article-show"); // запускаем анимацию исчезновения
+        
+        // Удаляем из DOM после завершения анимации
+        setTimeout(() => {
+          article.remove();
+
+        }, 300); 
+      }
+    }
+  };
+
+
+  
+  btn.onclick = () => {
+    form.classList.remove("form-hide");
+    form.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   btn.onclick = () => {
     form.classList.remove("form-hide");
     form.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -32,12 +59,13 @@ export const initArticleForm = () => {
 
     newArticle.classList.add("article-new");
 
-    newArticle.querySelector("h3").textContent = titleValue;//тайтл
+    newArticle.querySelector("h3").textContent = titleValue; //тайтл
 
-    const countCurrentArticles = grid.querySelectorAll(".blog-article").length;//считаем все
-    if (countCurrentArticles === 0) {// берем самый первый
+    const countCurrentArticles = grid.querySelectorAll(".blog-article").length; //считаем все
+    if (countCurrentArticles === 0) {
+      // берем самый первый
       const description = document.createElement("p");
-      description.textContent = textValue;//описание для первого
+      description.textContent = textValue; //описание для первого
       contentContainer.append(description);
     }
 
@@ -58,4 +86,5 @@ export const initArticleForm = () => {
       form.reset(); //чистим данные, когда форму уже не видно
     }, 1100);
   };
+  
 };
