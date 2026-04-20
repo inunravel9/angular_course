@@ -13,9 +13,29 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 228px 228px 2fr;
-  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: 250px 250px; 
   gap: 20px;
+}
+
+.item-large {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.item-tall {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.item-stacked-top {
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+
+.item-stacked-bottom {
+  grid-column: 3 / span 2;
+  grid-row: 2;
 }
 
 .project-item img {
@@ -24,14 +44,6 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
-}
-
-.item-large {
-  grid-row: span 2;
-}
-
-.item-tall {
-  grid-row: span 2;
 }
 
 .projects-grid .project-item:first-child {
