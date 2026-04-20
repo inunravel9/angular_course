@@ -2,7 +2,7 @@ export const initArticleForm = () => {
   const btn = document.querySelector("#create-article-btn");
   const form = document.querySelector("#article-form");
   const close = document.querySelector("#cancel-button");
-  const stub = document.querySelector("#zaglushka")
+  const stub = document.querySelector("#zaglushka");
   const grid = document.querySelector(".articles-grid");
 
   btn.onclick = () => {
@@ -23,9 +23,24 @@ export const initArticleForm = () => {
     const newArticle = temp.content
       .cloneNode(true)
       .querySelector(".blog-article");
-    stub.remove("#zaglushka");
+
+    if (stub) stub.remove(); //убираем заглушку, если она есть
+
+    const titleValue = form.querySelector("#article-title").value;
+    const textValue = form.querySelector("#article-textarea").value;
+    const contentContainer = newArticle.querySelector(".article-content");
+
     newArticle.classList.add("article-new");
-    newArticle.querySelector("h3").textContent = "Новая запись";
+
+    newArticle.querySelector("h3").textContent = titleValue;//тайтл
+
+    const countCurrentArticles = grid.querySelectorAll(".blog-article").length;//считаем все
+    if (countCurrentArticles === 0) {// берем самый первый
+      const description = document.createElement("p");
+      description.textContent = textValue;//описание для первого
+      contentContainer.append(description);
+    }
+
     const time = newArticle.querySelector("time");
     time.textContent = new Date().toLocaleDateString("ru-RU", {
       day: "numeric",
