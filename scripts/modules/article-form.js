@@ -1,11 +1,11 @@
 export const initArticleForm = () => {
-  const btn = document.querySelector("#create-article-btn");
-  const form = document.querySelector("#article-form");
-  const close = document.querySelector("#cancel-button");
-  const stub = document.querySelector("#zaglushka");
+  const createArticleBtn = document.querySelector("#create-article-btn");
+  const articleForm = document.querySelector("#article-form");
+  const closeArticleBtn = document.querySelector("#cancel-button");
+  const blank = document.querySelector("#zaglushka");
 
   const grid = document.querySelector(".articles-grid");
-  const temp = document.querySelector("#article-template");
+  const templateArticle = document.querySelector("#article-template");
 
   grid.onclick = (event) => {
     const deleteBtn = event.target.closest(".delete-btn");
@@ -20,23 +20,23 @@ export const initArticleForm = () => {
     }
   };
 
-  btn.onclick = () => {
-    form.classList.remove("form-hide");
-    form.scrollIntoView({ behavior: "smooth", block: "center" });
+  createArticleBtn.onclick = () => {
+    articleForm.classList.remove("form-hide");
+    articleForm.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
-  close.onclick = () => {
-    form.classList.add("form-hide");
-    form.reset();
+  closeArticleBtn.onclick = () => {
+    articleForm.classList.add("form-hide");
+    articleForm.reset();
   };
 
-  form.onsubmit = (event) => {
+  articleForm.onsubmit = (event) => {
     event.preventDefault(); //отказ от перезагрузки страницы
-    if (stub) stub.remove(); //убираем заглушку, если она есть
+    if (blank) blank.remove(); //убираем заглушку, если она есть
 
-    const titleValue = form.querySelector("#article-title").value;
-    const textValue = form.querySelector("#article-textarea").value;
-    const newArticle = temp.content
+    const titleValue = articleForm.querySelector("#article-title").value;
+    const textValue = articleForm.querySelector("#article-textarea").value;
+    const newArticle = templateArticle.content
       .cloneNode(true)
       .querySelector(".blog-article");
     const contentContainer = newArticle.querySelector(".article-content");
@@ -63,9 +63,9 @@ export const initArticleForm = () => {
     setTimeout(() => {
       newArticle.classList.add("article-show");
     }, 10);
-    form.classList.add("form-hide");
+    articleForm.classList.add("form-hide");
     setTimeout(() => {
-      form.reset(); //чистим данные, когда форму уже не видно
+      articleForm.reset(); //чистим данные, когда форму уже не видно
     }, 1100);
   };
 };
