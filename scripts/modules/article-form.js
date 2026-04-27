@@ -3,7 +3,6 @@ export const initArticleForm = () => {
   const articleForm = document.querySelector("#article-form");
   const closeArticleBtn = document.querySelector("#cancel-button");
   const blank = document.querySelector("#zaglushka");
-
   const grid = document.querySelector(".articles-grid");
   const templateArticle = document.querySelector("#article-template");
 
@@ -36,9 +35,7 @@ export const initArticleForm = () => {
 
     const titleValue = articleForm.querySelector("#article-title").value;
     const textValue = articleForm.querySelector("#article-textarea").value;
-    const newArticle = templateArticle.content
-      .cloneNode(true)
-      .querySelector(".blog-article");
+    const newArticle = templateArticle.content.cloneNode(true).querySelector(".blog-article");
     const contentContainer = newArticle.querySelector(".article-content");
 
     newArticle.classList.add("article-new");
@@ -51,13 +48,28 @@ export const initArticleForm = () => {
       description.textContent = textValue; //описание для первого
       contentContainer.append(description);
     }
-    const time = newArticle.querySelector("time");
-    time.textContent = new Date().toLocaleDateString("ru-RU", {
+    
+    const articleTimeString = new Date().toLocaleDateString("ru-RU", {
       day: "numeric",
       month: "long",
       year: "numeric",
     });
-    time.setAttribute("datetime", new Date().toISOString().split("T")[0]);
+
+    const articleTime = newArticle.querySelector("time");
+    articleTime.textContent = articleTimeString; //дата для статьи
+    articleTime.setAttribute(
+      "datetime",
+      new Date().toISOString().split("T")[0],
+    );
+    let articlesArray = JSON.parse(localStorage.getItem("articles")) || [];
+    const newArticleObj = {//создаем объект для локасторадж
+      title: titleValue,
+      text: textValue,
+      date: articleTimeString,
+    };
+
+    articlesArray.push(newArticleObj);
+    localStorage.setItem("articles", JSON.stringify(articlesArray));
 
     grid.append(newArticle);
     setTimeout(() => {
