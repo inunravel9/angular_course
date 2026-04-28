@@ -34,9 +34,9 @@ body.blog-page .articles-grid .blog-article:first-child {
 }
 
 #zaglushka {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  margin: auto auto;
+  text-align: center;
+  padding-top: 100px;
+  color: var(--text);
 }
 
 .delete-btn svg {
@@ -55,4 +55,58 @@ body.blog-page .articles-grid .blog-article:first-child {
 .delete-btn svg:hover {
   opacity: 1;
   visibility: visible;
+}
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  font-size: 140px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loader span {
+  animation: blink 1.4s infinite both;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    color: var(--accsent_orange);
+  }
+  20% {
+    color: var(--accsent_green);
+  }
+  100% {
+    color: var(--accsent_orange);
+  }
+}
+
+.grid-loading {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(0.7);
+}
+
+.blog-article-content {
+  position: relative;
+  min-height: 200px;
+}
+
+.hide {
+  display: none !important;
 }
