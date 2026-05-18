@@ -3,7 +3,7 @@ body.blog-page .articles-grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
-  min-height: 200px;
+  min-height: 320px;
   box-sizing: border-box;
   margin: 40px 0;
 }
