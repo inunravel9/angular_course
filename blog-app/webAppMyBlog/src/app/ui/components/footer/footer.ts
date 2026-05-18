@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
-export class Footer {}
+export class Footer {
+
+onSubmit(event: Event) {
+    event.preventDefault();
+    console.log('Форма футера успешно отправлена!');
+}
+}
