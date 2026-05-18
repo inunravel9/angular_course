@@ -1,34 +1,58 @@
 body.blog-page .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+  margin: 40px 0;
 }
 
-body.blog-page .article-even, 
-body.blog-page .article-odd {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 0;
-    width: 100%; 
-    overflow: hidden;
+body.blog-page .blog-article {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
 }
 
-body.blog-page img:not(.about-image-overlay), .article-content img:not(.about-image-overlay) {
-    order: 1;
-    width: 100%;
-    max-width: 100%; 
-    object-fit: cover;
-    margin: 0;
+body.blog-page img:not(.about-image-overlay),
+.article-content img:not(.about-image-overlay) {
+  order: 1;
+  min-width: auto;
+  max-width: 100%;
+  margin: 0;
 }
 
+body.blog-page .articles-grid .blog-article:first-child {
+  grid-column: span 3;
+  flex-direction: row-reverse;
+  align-items: center;
+  min-height: 400px;
+}
 
-body.blog-page .articles-grid article:first-child {
-    grid-column: span 3; 
-    display: flex;
-    flex-direction: row-reverse; 
-    align-items: center;
-    min-height: 400px;
+#zaglushka {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin: auto auto;
+}
+
+.delete-btn svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  fill: var(--text);
+  stroke: var(--text);
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delete-btn svg:hover {
+  opacity: 1;
+  visibility: visible;
 }
