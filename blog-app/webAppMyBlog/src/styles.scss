@@ -8,10 +8,10 @@ html,
 body {
   font-family: Inter, sans-serif;
   scroll-behavior: smooth;
+  zoom: 0.9;
 }
 
 :root {
-  /* Переменные теперь нативные CSS */
   --heading: #323747;
   --text: #68686a;
   --graphics: #bdc1ca;
