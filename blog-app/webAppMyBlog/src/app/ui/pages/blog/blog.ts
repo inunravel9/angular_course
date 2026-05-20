@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { AddArticleForm } from '../../components/add-article-form/add-article-form'; 
 import { Aside } from '../../components/aside/aside';
+import { StatisticDialog } from '../../components/statistic-dialog/statistic-dialog';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [AddArticleForm, Aside],
+  imports: [StatisticDialog, AddArticleForm, Aside],
   templateUrl: './blog.html',
   styleUrl: './blog.scss'
 })
