@@ -1,5 +1,5 @@
 <aside class="admin-panel">
-          <button type="button" id="create-article-btn" title="Создать статью">
+          <button (click)="onAddArticleClick()" id="create-article-btn" title="Создать статью">
             <svg
               class="admin-icon"
               width="18"
@@ -14,7 +14,7 @@
               />
             </svg>
           </button>
-          <button type="button" id="show-stats-btn" title="Показать статистику">
+          <button (click)="onOpenStatsClick()" id="show-stats-btn" title="Показать статистику">
             <svg
               class="admin-icon"
               width="22"

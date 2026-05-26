@@ -1,19 +1,17 @@
-<section class="container" class="admin-section">
-        <form id="article-form" class="form-hide">
-          <h2>Создать статью</h2>
-          <label for="article-title">Заголовок</label>
-          <input type="text" id="article-title" required />
-          <label for="article-textarea">Текст статьи</label>
-          <textarea
-            placeholder="Текст статьи"
-            id="article-textarea"
-            required
-          ></textarea>
-          <div class="button-area">
-            <button type="submit" class="submit-btn">Добавить</button>
-            <button type="button" id="cancel-button" class="button-white">
-              Отмена
-            </button>
-          </div>
-        </form>
-      </section>
+<section class="container admin-section">
+  <form id="article-form">
+    <h2>Создать статью</h2>
+    <label for="article-title">Заголовок</label>
+    <input type="text" id="article-title" required />
+    
+    <label for="article-textarea">Текст статьи</label>
+    <textarea placeholder="Текст статьи" id="article-textarea" required></textarea>
+    
+    <div class="button-area">
+      <button type="submit" class="submit-btn">Добавить</button>
+      <button type="button" id="cancel-button" class="button-white" (click)="onCancel()">
+        Отмена
+      </button>
+    </div>
+  </form>
+</section>

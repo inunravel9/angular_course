@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-aside',
@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   templateUrl: './aside.html',
   styleUrl: './aside.scss',
 })
-export class Aside {}
+export class Aside {
+  @Output() openForm = new EventEmitter<void>();
+  @Output() openDialog = new EventEmitter<void>();
+  
+  onAddArticleClick() {
+    this.openForm.emit();
+  }
+
+  onOpenStatsClick() {
+    this.openDialog.emit();
+  }
+}
