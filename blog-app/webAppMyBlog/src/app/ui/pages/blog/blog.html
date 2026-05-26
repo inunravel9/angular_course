@@ -1,0 +1,58 @@
+<section class="container">
+  <div class="about-section">
+    <div>
+      <h1>Мой блог</h1>
+      <p>
+        Lorem occaecat proident excepteur commodo et nulla eiusmod. Elit
+        esse aute officia dolor elit aute
+      </p>
+    </div>
+    <div class="about-image">
+      <img
+        class="about-image-overlay"
+        src="picture/Selection(3)1.png"
+        alt="Мой блог"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h1>Все статьи</h1>
+  <div class="blog-article-content">
+    <div class="loader"><span>.</span><span>.</span><span>.</span></div>
+    <p id="zaglushka" class="hide">Нет статей</p>
+    <div class="articles-grid"></div>
+  </div>
+
+
+<!-- <app-add-article-form 
+  [class.form-hide]="!isFormVisible"
+  (closeForm)="toggleForm(false)">
+</app-add-article-form> -->
+
+<!-- Если true, Angular добавит форму в DOM и запустит анимацию :enter -->
+@if (isFormVisible) {
+  <app-add-article-form 
+    [@slideInOut] 
+    (closeForm)="toggleForm(false)">
+  </app-add-article-form>
+}
+
+@if (isDialogVisible) {
+  <app-statistic-dialog 
+    [@slideInOut]
+    (closeDialog)="toggleDialog(false)">
+  </app-statistic-dialog>
+}
+
+  <app-statistic-dialog 
+    [class.form-hide]="!isDialogVisible"
+    (closeDialog)="toggleDialog(false)">
+  </app-statistic-dialog>
+
+  <app-aside 
+    (openForm)="toggleForm(true)" 
+    (openDialog)="toggleDialog(true)">
+  </app-aside>
+</section>

@@ -1,0 +1,112 @@
+body.blog-page .articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  min-height: 320px;
+  box-sizing: border-box;
+  margin: 40px 0;
+}
+
+body.blog-page .blog-article {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+}
+
+body.blog-page img:not(.about-image-overlay),
+.article-content img:not(.about-image-overlay) {
+  order: 1;
+  min-width: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+body.blog-page .articles-grid .blog-article:first-child {
+  grid-column: span 3;
+  flex-direction: row-reverse;
+  align-items: center;
+  min-height: 400px;
+}
+
+#zaglushka {
+  text-align: center;
+  padding-top: 100px;
+  color: var(--text);
+}
+
+.delete-btn svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  fill: var(--text);
+  stroke: var(--text);
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delete-btn svg:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  font-size: 140px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loader span {
+  animation: blink 1.4s infinite both;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    color: var(--accsent_orange);
+  }
+  20% {
+    color: var(--accsent_green);
+  }
+  100% {
+    color: var(--accsent_orange);
+  }
+}
+
+.grid-loading {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(0.7);
+}
+
+.blog-article-content {
+  position: relative;
+  min-height: 200px;
+}
+
+.hide {
+  display: none !important;
+}
